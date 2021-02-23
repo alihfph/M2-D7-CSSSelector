@@ -47,6 +47,38 @@
           font-size: 3.5rem;
         }
       }
+
+      .display-4.font-italic {
+        color: brown;
+      }
+      .p-2.text-muted{
+        color: brown !important;
+      }
+      .text-white.font-weight-bold{
+        background: chartreuse;
+      }
+     
+      .p-2.text-muted:nth-child(even){
+        color: pink !important;
+      }
+      h2:first-of-type{
+        background-color: rgb(128, 90, 97);
+      }
+      h2:last-of-type{
+        background-color: rgb(201, 8, 226);
+      }
+     .list-unstyled.mb-0{
+       background-color: crimson;
+     }
+     .h2, h2:nth-child(2) {
+       color: rgb(22, 136, 12) !important;
+     }
+     footer a[href*="#"]{
+       color: orange;
+     }
+     footer {
+       background-color: orange;
+     }
     </style>
     <link
       href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900"
@@ -199,7 +231,7 @@
           <h3 class="pb-4 mb-4 font-italic border-bottom">From the Firehose</h3>
 
           <div class="blog-post">
-            <h2 class="blog-post-title">Sample blog post</h2>
+            <h2 class="blog-post-title" >Sample blog post</h2>
             <p class="blog-post-meta">
               January 1, 2014 by <a href="#">Mark</a>
             </p>
@@ -419,6 +451,62 @@
     </footer>
 
     <script>
+      function addlink() {
+        var tag = document.createElement("a");
+        var text = document.createTextNode("new world");
+        tag.appendChild(text);
+        var element = document.getElementsByTagName("nav")[0];
+        element.appendChild(tag)
+        console.log()
+      
+        }
+
+        function colorChnage() {
+          let gettitle =  document.getElementsByTagName("h1")[0]
+          gettitle.style.color = "white"
+          console.log()
+          
+        }
+        function jumbotrum() {
+          let getjumbotrum = document.getElementsByClassName("jumbotron p-4 p-md-5 text-white rounded bg-dark")
+          
+          console.log()
+          }
+          function removeAlink() {
+            let anchors = document.querySelectorAll("A")
+            for ( var i=0; i < anchors.length; i++ ) {
+             var span = document.createElement("SPAN");
+    if ( anchors[i].className ) {
+        span.className = anchors[i].className;
+    }
+
+    if ( anchors[i].id ) {
+        span.id = anchors[i].id;
+    }
+
+    span.innerHTML = anchors[i].innerHTML;
+
+    anchors[i].parentNode.replaceChild(span, anchors[i]);
+}
+console.log()
+
+
+ }
+ function sizeChnage() {
+          let gettitle =  document.getElementsByTagName("h1")[0]
+          gettitle.style.fontSize = "25px"
+
+          console.log()
+          
+        }
+        function reomovesvg() {
+          let removesvg = document.getElementsByTagName("svg")
+          let getheader =document.getElementsByTagName("header")[0]
+          getheader.remove(removesvg)
+          console.log()
+          
+        }
+
   
     </script>
   </body>
