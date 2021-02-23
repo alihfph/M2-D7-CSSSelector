@@ -506,6 +506,20 @@ console.log()
           console.log()
           
         }
+        const trunc = () => {
+        const el = document.querySelectorAll(".blog-main > .blog-post > p");
+
+        el.forEach((p) => {
+          p.innerText = p.innerText.substring(0, 50);
+        });
+      };
+      const removeLatest = () => {
+        const els = document.querySelectorAll(".blog-post");
+
+        els[els.length - 1].remove();
+      };
+
+
 
   
     </script>
